@@ -12,7 +12,7 @@ from reports.compliance_reporting_engine import (
 
 
 st.set_page_config(
-    page_title="RemitGuard AI",
+    page_title="RemitGuard Globe",
     layout="wide"
 )
 
