@@ -1,0 +1,17 @@
+streamlit
+plotly
+pandas
+numpy
+langchain
+langchain-community
+langchain-text-splitters
+chromadb
+sentence-transformers
+huggingface-hub
+pytesseract
+pdfplumber
+pillow
+reportlab
+google-generativeai
+langchain-google-genai
+python-dotenv
