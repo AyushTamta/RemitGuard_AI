@@ -38,12 +38,12 @@ html, body, [class*="css"] {
 
 # ---------------- HEADER ----------------
 st.markdown(
-    '<div class="main-title">🌍 RemitGuard AI</div>',
+    '<div class="main-title">🌍 RemitGuard Globe</div>',
     unsafe_allow_html=True
 )
 
 st.caption(
-    "AI-Powered Cross-Border Remittance Intelligence Platform"
+    "Cross-Border Remittance Intelligence Platform"
 )
 
 st.markdown("---")
