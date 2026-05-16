@@ -3,13 +3,14 @@ import pytesseract
 
 from PIL import Image
 
-from ai.entity_extractor import extract_entities
+from .entity_extractor import extract_entities
 
-from ai.intelligence_retrieval_engine import (
+from .intelligence_retrieval_engine import (
     run_financial_investigation
 )
 
 
+# ---------------- OCR EXTRACTION ----------------
 def extract_text(uploaded_file):
 
     text = ""
@@ -30,6 +31,7 @@ def extract_text(uploaded_file):
     return text
 
 
+# ---------------- DOCUMENT ANALYSIS ----------------
 def analyze_document(uploaded_file):
 
     text = extract_text(uploaded_file)

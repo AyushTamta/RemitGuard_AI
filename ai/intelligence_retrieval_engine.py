@@ -2,11 +2,16 @@ from langchain_text_splitters import CharacterTextSplitter
 
 from langchain_community.vectorstores import Chroma
 
-from langchain_community.embeddings import HuggingFaceEmbeddings
+from langchain_community.embeddings import (
+    HuggingFaceEmbeddings
+)
 
-from ai.investigation_engine import run_ai_investigation
+from .investigation_engine import (
+    run_ai_investigation
+)
 
 
+# ---------------- RAG INVESTIGATION ----------------
 def run_financial_investigation(text, entities):
 
     splitter = CharacterTextSplitter(
@@ -38,14 +43,18 @@ def run_financial_investigation(text, entities):
     {entities['amount']}
     """
 
-    relevant_docs = retriever.invoke(retrieval_query)
+    relevant_docs = retriever.invoke(
+        retrieval_query
+    )
 
     context = " ".join([
         doc.page_content
         for doc in relevant_docs
     ])
 
-    investigation = run_ai_investigation(context)
+    investigation = run_ai_investigation(
+        context
+    )
 
     return {
         "summary": investigation,
